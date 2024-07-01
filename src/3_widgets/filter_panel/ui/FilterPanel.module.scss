@@ -1,0 +1,23 @@
+
+.wrapperSearch {
+  padding: 12px;
+  border: 1px solid black;
+  margin: 12px;
+  border-radius: 10px;
+  background-color: #7f97d3;
+}
+
+.asideFilter {
+  padding-bottom: 12px;
+}
+
+.asideButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.searchPanel {
+  max-width: 300px;
+  width: 100%;
+}

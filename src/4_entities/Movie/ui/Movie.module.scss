@@ -1,0 +1,42 @@
+.textMovie {
+  font-size: 16px;
+}
+
+.movie {
+  width: 100%;
+}
+.wrapperMovie {
+  //border: 1px solid black;
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-right: 12px;
+  //margin: 12px;
+}
+.headerMovie {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+
+}
+.wrapperMovieItem {
+  border: 1px solid black;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+.title {
+  font-size: 22px;
+  font-weight: bold;
+}
+.headerItemMovie {
+  display: flex;
+  justify-content: space-between;
+}
+.image {
+  width: 80px;
+  height: 100px;
+  background: #918888;
+  border-radius: 10px;
+}
+.rightDescription {
+  margin-left: auto;
+}

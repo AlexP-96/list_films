@@ -8,7 +8,7 @@ interface InputProps {
     handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     type: string;
     checked?: boolean;
-    name?: string
+    name?: string;
 }
 
 export const Input = (props: InputProps) => {

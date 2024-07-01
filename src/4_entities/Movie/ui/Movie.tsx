@@ -12,7 +12,7 @@ import {
 } from "4_entities/Movie/model/selectors/MovieSelectors/MovieSelectors";
 import {
     requestDataMovieSelector
-} from "4_entities/BlockRadioFilter/model/selectors/getBlockFilterValue/requestDataMovie";
+} from "4_entities/RequestsFilter/model/selectors/getBlockFilterValue/requestDataMovie";
 
 
 interface MovieProps {
@@ -36,13 +36,14 @@ export const Movie = ({className}: MovieProps) => {
             .then(res => {
                 dispatch(movieActions.resLoading(false))
                 dispatch(movieActions.resData(res.data.data));
+                dispatch(movieActions.resSizePage(res.data.data_size));
             })
             .catch(err => {
                 console.log(err)
             })
     }, [requestData]);
 
-    if (responseData.data) {
+    if (responseData) {
         if (resLoading) {
             return <div>Loading</div>
         } else {
@@ -52,7 +53,7 @@ export const Movie = ({className}: MovieProps) => {
                         <Virtuoso
                             style={{height: '90vh'}}
                             totalCount={10}
-                            data={responseData.data}
+                            data={responseData}
                             itemContent={(index, data) => {
                                 return (
                                     <MovieItem

@@ -1,5 +1,5 @@
-import {getAllMovies } from '../api/apiEndpoints/movieApi';
+import { RequestManager } from '../api/apiEndpoints/movieApi';
 
 export {
-    getAllMovies,
+    RequestManager,
 }

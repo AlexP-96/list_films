@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {StateSchema} from "../config/stateShema";
-import {BlockRadioReducer} from "4_entities/BlockRadioFilter";
+import {BlockRadioReducer} from "../../../../4_entities/RequestsFilter";
 import {dataMovie, IReqMovie} from "6_shared/api/types/types";
 import {movieReducers} from "4_entities/Movie/model/slice/MovieSlice";
 import {ISelectorResponse} from "4_entities/Movie/model/types/types";

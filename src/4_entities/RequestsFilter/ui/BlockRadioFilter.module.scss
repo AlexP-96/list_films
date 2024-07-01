@@ -17,10 +17,11 @@
   padding-bottom: 12px;
 }
 
-.inputsFilter {
+.asideInputsFilter {
   display: flex;
   justify-content: space-between;
 }
+
 .labelBtnTitleFilter {
 
 }
@@ -33,10 +34,14 @@
 
 .showFilterPanel {
   height: 100%;
-  background: red;
+  //background: red;
 }
 
 .titleBlockFilter {
   cursor: pointer;
 }
+.labelFilter {
+  display: flex;
+  align-items: center;
 
+}

@@ -47,22 +47,24 @@ export interface responseMovie {
     ok: boolean;
     data_size: number;
     error: string;
-    data: dataMovie[]
+    data: dataMovie[];
 }
 
 export type sortFiled =
-    "imdb_id"
-    | "budget"
-    | "original_language"
-    | "popularity"
-    | "release_date"
-    | "revenue"
-    | "runtime"
-    | "status"
-    | "vote_average"
-    | "vote_count";
+    'imdb_id'
+    | 'budget'
+    | 'original_language'
+    | 'popularity'
+    | 'release_date'
+    | 'revenue'
+    | 'runtime'
+    | 'status'
+    | 'vote_average'
+    | 'vote_count';
 
-export type sortOrder = "desc" | "asc";
+export type sortOrder =
+    'desc'
+    | 'asc';
 
 export interface IReqMovie {
     page?: number;
@@ -98,18 +100,20 @@ export interface optionsReqMovie {
     config?: any;
 }
 
-export type reqGenresMovie =
-    'Action'
-    | 'Adventure'
-    | 'Animation'
-    | 'Comedy'
-    | 'Crime'
-    | 'Documentary'
-    | 'Drama'
-    | 'Fantasy'
-    | 'Film-Noir'
-    | 'Horror'
-    | 'Musical'
-    | 'Mystery'
-    | 'Romance'
-    | 'Sci-Fi'
+export enum reqGenresMovie {
+    ACTION = 'Action',
+    ADVENTURE = 'Adventure',
+    ANIMATION = 'Animation',
+    COMEDY = 'Comedy',
+    CRIMINAL = 'Crime',
+    DOCUMENTARY = 'Documentary',
+    DR_ADIEU = 'Drama',
+    FANTASY = 'Fantasy',
+    FILM_NOIR = 'Film-Noir',
+    HORROR = 'Horror',
+    MUSICAL = 'Musical',
+    MYSTERY = 'Mystery',
+    ROMANCE = 'Romance',
+    SCI_FI = 'Sci-Fi',
+}
+

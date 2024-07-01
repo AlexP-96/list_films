@@ -3,17 +3,17 @@ import {IReqMovie} from "6_shared/api/types/types";
 
 const initialState: IReqMovie = {
     page: 0,
-    search: null,
-    // genres: [''],
-    status: null,
+    page_size: 10,
     sort_order: 'asc',
+    search: null,
+    genres: null,
+    status: null,
     adult: false,
-    // ids: [],
+    ids: null,
     budget_max: null,
     budget_min: null,
     imdb_id: null,
     original_language: null,
-    page_size: 10,
     popularity_max: null,
     popularity_min: null,
     release_date_max: null,
@@ -23,7 +23,7 @@ const initialState: IReqMovie = {
     runtime_max: null,
     runtime_min: null,
     sort_field: null,
-    // spoken_languages: [],
+    spoken_languages: null,
     vote_average_max: null,
     vote_average_min: null,
     vote_count_max: null,
@@ -45,6 +45,16 @@ export const requestSlice = createSlice({
             state[keyOne] =  valueOne;
             //@ts-ignore
             state[keyTwo] =  valueTwo;
+        },
+        searchMovie: (state, action) => {
+            state.search = action.payload;
+        },
+        requestMoviesArr: (state, action) => {
+            //@ts-ignore
+            state[action.payload.key] = action.payload.value
+        },
+        requestPage: (state, action) =>  {
+            state.page = action.payload;
         }
     },
 })

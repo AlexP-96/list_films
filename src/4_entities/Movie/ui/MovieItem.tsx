@@ -27,7 +27,7 @@ export const MovieItem: FC<MovieItemProps> = ({obj}) => {
                 <div className={cls.headerItemMovie}>
                     <div className={cls.image}>
                     </div>
-                    <div className={cls.descriptionsMovie}>
+                    <div>
                         <Text className={cls.title}>
                             {obj.title === null ? '-' : obj.title}
                         </Text>

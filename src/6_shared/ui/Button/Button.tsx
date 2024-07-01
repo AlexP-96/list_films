@@ -1,20 +1,22 @@
-import React, {FormEvent} from 'react';
+import React, {
+    FC,
+    FormEvent,
+    PropsWithChildren,
+} from 'react';
 import {classNames} from '6_shared/lib/helpers/classNames/classNames';
 import cls from './Button.module.scss';
 
-interface ButtonProps {
+interface ButtonProps extends PropsWithChildren {
     className?: string;
-    children?: React.ReactNode;
+    submit?: (e: FormEvent<HTMLButtonElement>) => void;
 }
 
-export const Button = ({className, children}: ButtonProps) => {
-    const handleClick = (e: FormEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-    }
+export const Button: FC<ButtonProps>= ({className, submit, children}) => {
+
     return (
         <button
             className={classNames(cls.button, {}, [className])}
-            onSubmit={handleClick}
+            onClick={submit}
         >
             {children}
         </button>
